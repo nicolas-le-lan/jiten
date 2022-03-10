@@ -1,0 +1,9 @@
+<main class="px-3 mb-auto cover-container d-flex p-3 mx-auto flex-column">
+    <h1 class="text-center p-5">Jiten: The Japanese-English dictionary</h1>
+    <div class="container p-5 justify-content-center align-items-center">
+        {{> searchbar}}
+        {{#if research}}
+        <h5><span id="last_research" class="ms-4 badge text-dark">Your last research was <a href="/search/{{research}}">{{research}}</a>.</span></h5>
+        {{/if}}
+    </div>
+</main>

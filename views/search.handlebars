@@ -1,0 +1,47 @@
+<div class="mx-auto px-5">
+  <div class="pb-3">
+    {{> searchbar data=wordkey}}
+  </div>
+  {{#if data.length}}
+  <ul class="justify-content-center">
+    {{#each data}}
+    <div class="card" style="width: auto;">
+      <div class="card-header bg-light">
+        {{#if this.japanese.[0].word}}
+        {{this.japanese.[0].reading}}<h2 class="card-title">{{this.japanese.[0].word}}</h2>
+        {{else}}
+        <h2 class="card-title">{{this.japanese.[0].reading}}</h2>
+        {{/if}}
+        {{#if this.jlpt}}
+        {{#each this.jlpt}}
+        <span class="badge bg-success">{{this}}</span>
+        {{/each}}
+        {{/if}}
+      </div>
+
+      <ul class="list-group bg-light">
+        {{#each this.senses}}
+        <li class="list-group-item bg-light"> {{#each parts_of_speech}}<span
+            class="badge
+            rounded-pill bg-primary">{{this}}</span> {{/each}}<h6>
+            {{this.english_definitions}} {{#if this.tags}}<span><small
+                class="text-muted">{{this.tags}}</span></small> {{/if}}</h6></li>
+        {{/each}}
+      </ul>
+
+      <ul class="list-group list-group-flush bg-light">
+        {{#if this.japanese.[1].reading}}
+        <li class="list-group-item bg-light"><strong>Other forms:</strong>
+          {{#each
+          this.japanese}}{{this.word}}{{#if this.word}}「{{this.reading}}」
+          {{else}}{{this.reading}} {{/if}}{{/each}}</li>
+        {{/if}}
+      </ul>
+    </div>
+    <br/>
+      {{/each}}
+    </ul>
+    {{else}}
+    <h3 class="d-flex justify-content-center">No words found</h3>
+    {{/if}}
+  </div>

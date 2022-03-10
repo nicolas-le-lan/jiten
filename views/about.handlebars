@@ -1,0 +1,43 @@
+<div class="px-3 mb-auto cover-container d-flex p-3 mx-auto flex-column">
+    <h1>About</h1>
+    <p>Jiten is a powerful Japanese-English dictionary. It lets you find words,
+        kanji, example sentences and more quickly and easily. Our goal is to
+        build a new kind of dictionary that doesn't just let you look up single
+        words or kanji, but rather helps you understand any Japanese text.
+        Ultimately we want to see it be a Google Now or Wolfram Alpha for the
+        Japanese language. Just paste what you want to understand into Jiten, be
+        it English, romaji, a single word or an entire paragraph of Japanese
+        text, and it will search a myriad of data to help you understand the
+        words, kanji and even grammar patterns.</p>
+    <h2>Search options</h2>
+    <p>There are many search options in Jiten that aren’t exposed in the
+        interface.</p>
+        <h3>Romaji conversion</h3>
+        <p>Jiten will try to automatically convert latin letters into kana.
+        Sometimes this might not be what you want, for example if you are trying
+        to search for date, which will be converted into だて. To avoid this
+        conversion and search for exactly date you can surround it with
+        quotation marks, "date".</p>
+
+        <h3>Wildcards</h3>
+        <p>You can use the two wildcards * and ? to search for unknown characters.
+        * will look for zero or more characters, and ? will look for exactly one
+        character. The Japanese full-width versions ＊ and ？ will also work.
+        Japanese text will normally only match the beginning of a word. If you
+        want to find Japanese text anywhere inside a word you must enclose your
+        search term with *.</p>
+    <h2>Data sources</h2>
+    <p>The data used in Jiten comes from a variety of open source projects. We
+        are immensely thankful to the people who work on these projects and make
+        them available for everyone studying Japanese to benefit from.</p>
+    <h3><a href="https://www.edrdg.org/jmdict/j_jmdict.html">JMdict</a></h3>
+    <p>JMdict, created by Jim Breen and now managed by the Electronic Dictionary
+        Research and Development Group (EDRDG), is a great general dictionary
+        with roughly 170 000 entries and is actively maintained by Jim Breen and
+        a team of volunteers. This dictionary file is the source of the bulk of
+        the words in Jiten.</p>
+</div>
+
+<footer class="position-absolute top-100 start-50 translate-middle mt-auto text-black-50 text-center">
+    {{> legal}}
+</footer>
