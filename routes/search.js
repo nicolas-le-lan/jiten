@@ -12,16 +12,17 @@ async function getData(word) {
 const express = require('express');
 const router = express.Router();
 
-router.get('/new_search', function (req, res) {
+router.get('/', function (req, res) {
     var word = req.query.word;
-	var urllink =  "/search/"+ word;
-	res.redirect(urllink);
-});
-
-
-
-router.get('/', (req,res) =>{
-    res.redirect(303, '/')
+	if (!(word))
+	{
+		res.redirect(303, '/')
+	}
+	else
+	{
+		var urllink =  "/search/"+ word;
+		res.redirect(urllink);
+	}
 });
 
 router.get('/:name', async(req,res) =>{
